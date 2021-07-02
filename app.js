@@ -34,28 +34,27 @@ function mine() {
     cheese++
     update()
 }
-function apple() {
-    apple++
-    update()
-}
-function orange() {
-    orange++
-    update()
-}
-function dog() {
-    dog++
-    update()
-}
-function cat() {
-    cat++
-    update()
-}
+// function apple() {
+//     apple++
+//     update()
+// }
+// function orange() {
+//     orange++
+//     update()
+// }
+// function dog() {
+//     dog++
+//     update()
+// }
+// function cat() {
+//     cat++
+//     update()
+// }
 function update() {
     document.getElementById('cheese').innerText = cheese
-    document.getElementById('apple').innerText = apple
+    document.getElementById('apple').innerHTML = apple
     document.getElementById('orange').innerText = orange
     document.getElementById('dog').innerText = dog
     document.getElementById('cat').innerText = cat
 
 }
-mine()
