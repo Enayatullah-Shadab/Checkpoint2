@@ -49,12 +49,12 @@ function buyDog() {
 function buyCat() {
     cat++
     update()
-    // }
-    function update() {
-        document.getElementById('cheese').innerText = cheese
-        document.getElementById('apple').innerHTML = apple
-        document.getElementById('orange').innerText = orange
-        document.getElementById('dog').innerText = dog
-        document.getElementById('cat').innerText = cat
+}
+function update() {
+    document.getElementById('cheese').innerText = cheese
+    document.getElementById('apple').innerHTML = apple
+    document.getElementById('orange').innerText = orange
+    document.getElementById('dog').innerText = dog
+    document.getElementById('cat').innerText = cat
 
-    }
+}
