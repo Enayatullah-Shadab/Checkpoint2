@@ -32,9 +32,21 @@ let automaticUpgrades = {
 function mine() {
     // alert("The number of your cheese is :" + cheese)
     cheese++
+    update()
+}
+function apple() {
     apple++
+    update()
+}
+function orange() {
     orange++
+    update()
+}
+function dog() {
     dog++
+    update()
+}
+function cat() {
     cat++
     update()
 }
