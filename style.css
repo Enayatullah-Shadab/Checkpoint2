@@ -1,3 +1,20 @@
-.border{
-    border: 5px dashed rgb(224, 5, 5);
+.round{
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    box-shadow: red;
+}
+.img{
+    border-radius: 50%;
+}
+.cheese{
+    border-radius: 25px;
+}
+.bt{
+    border-bottom-right-radius:20px ;
+    border-top-right-radius:20px
+}
+.invt{
+    border-radius: 10px;
+    border: 2px solid lightblue;
+
 }

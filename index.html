@@ -19,42 +19,54 @@
     </header>
     <main class="container">
         <div class="row">
-            <div class="col-3 p-5">
+            <div class="col-4">
                 <div class="row">
-                    <h2 class="dark">Start</h2>
-                    <div class="col-12 bg-warning">
+                    <h2 class="pt-4">Start</h2>
+                    <div class="col-12 bg-secondary text-light round">
                         <div>Cheese per Second:<span id="cps"> 0 </span></div>
                         <div>Total cheese multiplier: <span id="tcm"> -- </span></div>
                     </div>
+                    <h2 class="pt-2">Store</h2>
                 </div>
-                <h4 class="py-3">Store</h4>
-                <div class="row border">
+                <div class="row bg-secondary text-light round">
                     <div class="col-6">Click Upgrade</div>
                     <div class="col-6">Auto Upgrade</div>
                     <div class="col-6 mb-2">
                         <button class="btn btn-info" onclick="buyApple()">🍎</button>
-                        <h4>: <span id="apple">--</span></h4>
-                    </div>
-                    <div class="col-6 mb-2">
-                        <button class="btn btn-info" onclick="buyOrange()">🍊</button>
-                        <h4>: <span id="orange">--</span></h4>
+                        <h4 class="bg-success bt">: <span id="apple">--</span></h4>
                     </div>
                     <div class="col-6">
                         <button class="btn btn-info" onclick="buyDog()">😾</button>
-                        <h4>: <span id="dog">--</span></h4>
+                        <h4 class="bg-success bt">: <span id="dog">--</span></h4>
+                    </div>
+                    <div class="col-6 mb-2">
+                        <button class="btn btn-info" onclick="buyOrange()">🍊</button>
+                        <h4 class="bg-success bt">: <span id="orange">--</span></h4>
                     </div>
                     <div class="col-6">
                         <button class="btn btn-info" onclick="buyCat()">🐶</button>
-                        <h4>: <span id="cat">--</span></h4>
+                        <h4 class="bg-success bt">: <span id="cat">--</span></h4>
                     </div>
                 </div>
 
             </div>
-            <div class="col-md-6 py-5">
-                <img class="img-fluid btn" src="./image/Moon.jpg" alt="" onclick="mine()">
-                <h4 class="bg-success text-center text-light"> Cheese : <span id="cheese">--</span></h4>
+            <div class="col-5 py-5">
+                <img class="img-fluid btn img" src="./image/Moon.jpg" alt="" onclick="mine()">
+                <h4 class="bg-success text-center text-light cheese"> Cheese : <span id="cheese">--</span></h4>
             </div>
-            <div class="col-3"></div>
+            <div class="col-3 text-center py-5">
+
+                <div class="row bg-secondary text-light invt mt-5">
+                    <div>
+                        <h2 class="text-center text-light"> Inventory</h2>
+                    </div>
+                    <div class="col-12">Cheese : <span id="che">--</span></div>
+                    <div class="col-12">Cheese knives :<span id="chek">--</span></div>
+                    <div class="col-12">Cheese cart :<span id="chec">--</span></div>
+                    <div class="col-12">Moustronauts :<span id="mous">--</span></div>
+                    <div class="col-12">Graters :<span id="grt">--</span></div>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="container-fluid bg-info text-light py-3">
