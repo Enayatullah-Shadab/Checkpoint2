@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="cosmo.css">
     <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
     <title>Checkpoint-2</title>
 </head>
@@ -21,30 +20,33 @@
         <div class="row">
             <div class="col-4">
                 <div class="row">
-                    <h2 class="pt-4">Start</h2>
+
                     <div class="col-12 bg-secondary text-light round">
+
                         <div>Cheese per Second:<span id="cps"> 0 </span></div>
                         <div>Total cheese multiplier: <span id="tcm"> -- </span></div>
                     </div>
                     <h2 class="pt-2">Store</h2>
                 </div>
                 <div class="row bg-secondary text-light round">
-                    <div class="col-6">Click Upgrade</div>
-                    <div class="col-6">Auto Upgrade</div>
+                    <div class="col-6">Click Upgrades</div>
+                    <div class="col-6">Auto-click Upgrade</div>
                     <div class="col-6 mb-2">
-                        <button class="btn btn-info" onclick="buyApple()">🍎</button>
-                        <h4 class="bg-success bt">: <span id="apple">--</span></h4>
+
+                        <button class="btn btn-info" onclick="buyClickUpgrade('apple')">🍎</button>
+                        <h4 class="bg-success bt">: <span>--</span></h4>
+
                     </div>
                     <div class="col-6">
-                        <button class="btn btn-info" onclick="buyDog()">😾</button>
+                        <button class="btn btn-info" onclick="buyAutomaticUpgrade('dog')">😾</button>
                         <h4 class="bg-success bt">: <span id="dog">--</span></h4>
                     </div>
                     <div class="col-6 mb-2">
-                        <button class="btn btn-info" onclick="buyOrange()">🍊</button>
+                        <button class="btn btn-info" onclick="buyClickUpgrade('orange')">🍊</button>
                         <h4 class="bg-success bt">: <span id="orange">--</span></h4>
                     </div>
                     <div class="col-6">
-                        <button class="btn btn-info" onclick="buyCat()">🐶</button>
+                        <button class="btn btn-info" onclick="buyAutomaticUpgrade('cat')">🐶</button>
                         <h4 class="bg-success bt">: <span id="cat">--</span></h4>
                     </div>
                 </div>
@@ -61,10 +63,10 @@
                         <h2 class="text-center text-light"> Inventory</h2>
                     </div>
                     <div class="col-12">Cheese : <span id="che">--</span></div>
-                    <div class="col-12">Cheese knives :<span id="chek">--</span></div>
-                    <div class="col-12">Cheese cart :<span id="chec">--</span></div>
-                    <div class="col-12">Moustronauts :<span id="mous">--</span></div>
-                    <div class="col-12">Graters :<span id="grt">--</span></div>
+                    <div class="col-12">Apple :<span id="apple">--</span></div>
+                    <div class="col-12">Orange :<span id="orange">--</span></div>
+                    <div class="col-12">Dog :<span id="dog">--</span></div>
+                    <div class="col-12">Cat :<span id="cat">--</span></div>
                 </div>
             </div>
         </div>

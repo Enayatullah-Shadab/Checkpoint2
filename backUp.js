@@ -1,61 +1,61 @@
-// this is all my app.js backUp file
 let cheese = 0;
-let apple = 0;
-let orange = 0;
-let dog = 0;
-let cat = 0;
+let click = 1
+let autoClick = 0
 
-let clickUpgrade = {
+
+let clickUpgrades = {
     apple: {
-        price: 50,
+        price: 10,
         quantity: 0,
-        multiplayer: 1
+        multiplier: 1
     },
     orange: {
-        price: 200,
+        price: 20,
         quantity: 0,
-        multiplayer: 5
+        multiplier: 10
     }
 };
 
 let automaticUpgrades = {
     dog: {
-        price: 300,
+        price: 50,
         quantity: 0,
-        multiplayer: 6
+        multiplier: 15
     },
     cat: {
-        price: 500,
+        price: 100,
         quantity: 0,
-        multiplayer: 10
+        multiplier: 20
     }
 }
 function mine() {
     // alert("The number of your cheese is :" + cheese)
-    cheese++
-    update()
-}
-function buyApple() {
-    apple++
-    update()
-}
-function buyOrange() {
-    orange++
-    update()
-}
-function buyDog() {
-    dog++
-    update()
-}
-function buyCat() {
-    cat++
+    cheese += click
     update()
 }
 function update() {
     document.getElementById('cheese').innerText = cheese
-    document.getElementById('apple').innerHTML = apple
-    document.getElementById('orange').innerText = orange
-    document.getElementById('dog').innerText = dog
-    document.getElementById('cat').innerText = cat
+}
 
+function buyClickUpgrade(item) {
+    let cost = clickUpgrades[item].price
+    let amount = clickUpgrades[item].quantity
+    let bonus = clickUpgrades[item].multiplier
+    if (cheese >= cost) {
+        amount++
+        click += bonus
+        cheese -= cost
+    }
+    update()
+}
+function buyAutomaticUpgrade(item) {
+    let cost = automaticUpgrades[item].price
+    let amount = automaticUpgrades[item].quantity
+    let bonus = automaticUpgrades[item].multiplier
+    if (cheese >= cost) {
+        amount++
+        click += bonus
+        cheese -= cost
+    }
+    update()
 }
