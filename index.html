@@ -20,9 +20,8 @@
         <div class="row">
             <div class="col-4">
                 <div class="row">
-
-                    <div class="col-12 bg-secondary text-light round">
-
+                    <h2 class="mt-3">Start</h2>
+                    <div class="col-12 bg-secondary text-light round ">
                         <div>Cheese per Second:<span id="cps"> 0 </span></div>
                         <div>Total cheese multiplier: <span id="tcm"> -- </span></div>
                     </div>
@@ -31,26 +30,20 @@
                 <div class="row bg-secondary text-light round">
                     <div class="col-6">Click Upgrades</div>
                     <div class="col-6">Auto-click Upgrade</div>
+
                     <div class="col-6 mb-2">
-
                         <button class="btn btn-info" onclick="buyClickUpgrade('apple')">🍎</button>
-                        <h4 class="bg-success bt">: <span>--</span></h4>
-
                     </div>
                     <div class="col-6">
-                        <button class="btn btn-info" onclick="buyAutomaticUpgrade('dog')">😾</button>
-                        <h4 class="bg-success bt">: <span id="dog">--</span></h4>
+                        <button class="btn btn-info" onclick="buyAutomaticUpgrade('dog')">🐶</button>
                     </div>
                     <div class="col-6 mb-2">
                         <button class="btn btn-info" onclick="buyClickUpgrade('orange')">🍊</button>
-                        <h4 class="bg-success bt">: <span id="orange">--</span></h4>
                     </div>
                     <div class="col-6">
-                        <button class="btn btn-info" onclick="buyAutomaticUpgrade('cat')">🐶</button>
-                        <h4 class="bg-success bt">: <span id="cat">--</span></h4>
+                        <button class="btn btn-info" onclick="buyAutomaticUpgrade('cat')">😾</button>
                     </div>
                 </div>
-
             </div>
             <div class="col-5 py-5">
                 <img class="img-fluid btn img" src="./image/Moon.jpg" alt="" onclick="mine()">
@@ -62,11 +55,11 @@
                     <div>
                         <h2 class="text-center text-light"> Inventory</h2>
                     </div>
-                    <div class="col-12">Cheese : <span id="che">--</span></div>
-                    <div class="col-12">Apple :<span id="apple">--</span></div>
-                    <div class="col-12">Orange :<span id="orange">--</span></div>
-                    <div class="col-12">Dog :<span id="dog">--</span></div>
-                    <div class="col-12">Cat :<span id="cat">--</span></div>
+                    <div class="col-12 cheese"> Cheese : <span id="cheese">--</span></div>
+                    <div class="col-12">Apple :<span id="click">--</span></div>
+                    <div class="col-12">Orange : <span id="click">--</span></div>
+                    <div class="col-12">Dog :<span id="automatic">--</span></div>
+                    <div class="col-12">Cat :<span id="automatic">--</span></div>
                 </div>
             </div>
         </div>

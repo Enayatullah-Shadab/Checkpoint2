@@ -1,6 +1,6 @@
 let cheese = 0;
 let click = 1
-let autoClick = 0
+let automatic = 0
 
 
 let clickUpgrades = {
@@ -29,33 +29,35 @@ let automaticUpgrades = {
     }
 }
 function mine() {
-    // alert("The number of your cheese is :" + cheese)
     cheese += click
+
+    update()
+}
+
+function buyClickUpgrade(para) {
+    let cost = clickUpgrades[para].price
+    let amount = clickUpgrades[para].quantity
+    let bonus = clickUpgrades[para].multiplier
+    if (cheese >= cost) {
+        amount++
+        click += bonus
+        cheese -= cost
+    }
+    update()
+}
+function buyAutomaticUpgrade(para) {
+    let cost = automaticUpgrades[para].price
+    let amount = automaticUpgrades[para].quantity
+    let bonus = automaticUpgrades[para].multiplier
+    if (cheese >= cost) {
+        amount++
+        click += bonus
+        cheese -= cost
+    }
     update()
 }
 function update() {
     document.getElementById('cheese').innerText = cheese
-}
-
-function buyClickUpgrade(item) {
-    let cost = clickUpgrades[item].price
-    let amount = clickUpgrades[item].quantity
-    let bonus = clickUpgrades[item].multiplier
-    if (cheese >= cost) {
-        amount++
-        click += bonus
-        cheese -= cost
-    }
-    update()
-}
-function buyAutomaticUpgrade(item) {
-    let cost = automaticUpgrades[item].price
-    let amount = automaticUpgrades[item].quantity
-    let bonus = automaticUpgrades[item].multiplier
-    if (cheese >= cost) {
-        amount++
-        click += bonus
-        cheese -= cost
-    }
-    update()
+    document.getElementById('click').innerText = click
+    document.getElementById('automatic').innerText = automatic
 }
