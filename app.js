@@ -30,7 +30,22 @@ let automaticUpgrades = {
 }
 function mine() {
     cheese += click
-
+    update()
+}
+function myApple() {
+    apple += 1
+    update()
+}
+function myOrange() {
+    orange += 10
+    update()
+}
+function myDog() {
+    dog += 15
+    update()
+}
+function myCat() {
+    cat += 20
     update()
 }
 
@@ -58,6 +73,8 @@ function buyAutomaticUpgrade(para) {
 }
 function update() {
     document.getElementById('cheese').innerText = cheese
-    document.getElementById('click').innerText = click
-    document.getElementById('automatic').innerText = automatic
+    document.getElementById('ap').innerText = click
+    document.getElementById('or').innerText = click
+    document.getElementById('doc').innerText = click
+    document.getElementById('ca').innerText = click
 }
