@@ -1,9 +1,6 @@
-
-var app = 0
 let cheese = 0;
 let click = 1
 let automatic = 0
-let clicker = 0
 
 
 let clickUpgrades = {
@@ -21,22 +18,18 @@ let clickUpgrades = {
 
 let automaticUpgrades = {
     dog: {
-        price: 15,
+        price: 50,
         quantity: 0,
         multiplier: 7
     },
     cat: {
-        price: 25,
+        price: 100,
         quantity: 0,
         multiplier: 10
     }
 }
 function mine() {
     cheese += click
-    update()
-}
-function apple() {
-    app++
     update()
 }
 
@@ -49,7 +42,7 @@ function apple() {
 // }
 // function myOrange() {
 //     if (click === orange) {
-//         orange += 1
+//         orange += 10
 //     }
 //     update()
 // }
@@ -79,7 +72,7 @@ function buyClickUpgrade(para) {
     let bonus = clickUpgrades[para].multiplier
     if (cheese >= cost) {
         amount++
-        // click += bonus
+        click += bonus
         cheese -= cost
     }
     update()
@@ -90,16 +83,18 @@ function buyAutomaticUpgrade(para) {
     let bonus = automaticUpgrades[para].multiplier
     if (cheese >= cost) {
         amount++
-        // click += bonus
-        cheese += cost
+        click += bonus
+        cheese -= cost
     }
     update()
 }
 function update() {
     document.getElementById('cheese').innerText = cheese
     document.getElementById('che').innerText = cheese
-    document.getElementById('app').innerText = app
-    document.getElementById('org').innerText = org
+    document.getElementById('click').innerText = click
+    document.getElementById('automatic').innerText = automatic
+    document.getElementById('apple').innerText = apple
+    document.getElementById('orange').innerText = orange
     document.getElementById('dog').innerText = dog
     document.getElementById('cat').innerText = cat
 }
