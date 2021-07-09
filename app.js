@@ -1,86 +1,62 @@
 
-var app = 0
 let cheese = 0;
 let click = 1
-let automatic = 0
-let clicker = 0
-
+let Clicker = 1
 
 let clickUpgrades = {
     apple: {
-        price: 10,
+        price: 5,
         quantity: 0,
         multiplier: 1
     },
     orange: {
-        price: 20,
+        price: 10,
         quantity: 0,
-        multiplier: 5
+        multiplier: 2
     }
 };
 
 let automaticUpgrades = {
     dog: {
-        price: 15,
+        price: 20,
         quantity: 0,
-        multiplier: 7
+        multiplier: 3
     },
     cat: {
-        price: 25,
+        price: 30,
         quantity: 0,
-        multiplier: 10
+        multiplier: 4
     }
 }
 function mine() {
-    cheese += click
+    cheese++
     update()
 }
-function apple() {
+function buyApple() {
     app++
     update()
 }
-
-
-// function myApple() {
-//     if (click === apple) {
-//         apple += 1
-//     }
-//     update()
-// }
-// function myOrange() {
-//     if (click === orange) {
-//         orange += 1
-//     }
-//     update()
-// }
-// function myDog() {
-//     if (click === dog) {
-//         dog += 15
-//     }
-//     update()
-// }
-// function myCat() {
-//     if (click === cat) {
-//         cat += 1
-//     }
-//     update()
-// }
-// function myChe() {
-//     if (click === che) {
-//         che += 1
-//     }
-//     update()
-// }
+function buyOrange() {
+    org++
+    update()
+}
+function buyDog() {
+    dog++
+    update()
+}
+function buyCat() {
+    cat++
+    update()
+}
 
 function buyClickUpgrade(para) {
-    debugger;
     let cost = clickUpgrades[para].price
     let amount = clickUpgrades[para].quantity
     let bonus = clickUpgrades[para].multiplier
     if (cheese >= cost) {
         amount++
-        // click += bonus
         cheese -= cost
+        click += bonus
     }
     update()
 }
@@ -90,27 +66,24 @@ function buyAutomaticUpgrade(para) {
     let bonus = automaticUpgrades[para].multiplier
     if (cheese >= cost) {
         amount++
-        // click += bonus
         cheese += cost
+        click += bonus
     }
     update()
 }
 function update() {
     document.getElementById('cheese').innerText = cheese
     document.getElementById('che').innerText = cheese
-    document.getElementById('app').innerText = app
-    document.getElementById('org').innerText = org
-    document.getElementById('dog').innerText = dog
-    document.getElementById('cat').innerText = cat
+    document.getElementById('app').innerText = click
+    document.getElementById('org').innerText
+    document.getElementById('dog').innerText
+    document.getElementById('cat').innerText
 }
-function drawClick(par) {
-    let amount = clickUpgrades[par].quantity // need to be fixed 
-    document.getElementById(par).innerText = amount
+function drawClick(para) {
+    let amount = clickUpgrades[para].quantity
+    document.getElementById(para).innerText = amount
 }
-function drawAutomatic(par) {
-    let autoAmount = automaticUpgrades[par].quantity
-    document.getElementById(par).innerText = autoAmount
+function drawAutomatic(param) {
+    let autoAmount = automaticUpgrades[param].quantity
+    document.getElementById(param).innerText = autoAmount
 }
-
-drawClick()
-drawAutomatic()
