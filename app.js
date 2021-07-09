@@ -1,8 +1,13 @@
 
 let cheese = 0;
-let click = 1
-let Clicker = 1
+var click = 1
+var automaticClick = 0
 
+
+function mine() {
+    cheese++
+    update()
+}
 let clickUpgrades = {
     apple: {
         price: 5,
@@ -28,26 +33,47 @@ let automaticUpgrades = {
         multiplier: 4
     }
 }
-function mine() {
-    cheese++
-    update()
-}
-function buyApple() {
-    app++
-    update()
-}
-function buyOrange() {
-    org++
-    update()
-}
-function buyDog() {
-    dog++
-    update()
-}
-function buyCat() {
-    cat++
-    update()
-}
+
+// function buyApple() {
+//     if (cheese >= app) {
+//         app++
+//     }
+//     update()
+// }
+// function buyOrange() {
+//     if (cheese >= org) {
+//         org++
+//     }
+//     update()
+// }
+// function buyDog() {
+//     if (cheese >= dog) {
+//         dog++
+//     }
+//     update()
+// }
+// function buyCat() {
+//     if (cheese >= cat) {
+//         cat++
+//     }
+
+//     update()
+// }
+// function startInterval() {
+//     collectionInterval = setInterval(collectAutoUpgrades => {
+//         if (cheese >= cat) {
+//             cat.multiplier.price = cat
+//             cat++
+//         } else if (cheese >= cat) {
+//             cat.multiplier.price = cat
+//             cat++
+//         }
+//     }, 2000);
+
+//     update()
+// }
+
+// startInterval()
 
 function buyClickUpgrade(para) {
     let cost = clickUpgrades[para].price
@@ -55,35 +81,41 @@ function buyClickUpgrade(para) {
     let bonus = clickUpgrades[para].multiplier
     if (cheese >= cost) {
         amount++
-        cheese -= cost
         click += bonus
+        cheese -= cost
+        drawClickCost(para)
     }
     update()
+    drawClickAmount(para)
 }
+
 function buyAutomaticUpgrade(para) {
     let cost = automaticUpgrades[para].price
     let amount = automaticUpgrades[para].quantity
     let bonus = automaticUpgrades[para].multiplier
     if (cheese >= cost) {
         amount++
-        cheese += cost
-        click += bonus
+        automaticClick += bonus
+        cheese -= cost
+        drawAutomaticCost(para)
+        startInterval()
     }
     update()
+    drawAutomaticCount()
 }
 function update() {
     document.getElementById('cheese').innerText = cheese
     document.getElementById('che').innerText = cheese
     document.getElementById('app').innerText = click
-    document.getElementById('org').innerText
-    document.getElementById('dog').innerText
-    document.getElementById('cat').innerText
+    document.getElementById('cps').innerText = cps
+    document.getElementById('tcm').innerText = tcm
 }
-function drawClick(para) {
-    let amount = clickUpgrades[para].quantity
-    document.getElementById(para).innerText = amount
+
+function drawClickAmount(trm) {
+    let amount = clickUpgrades[trm].quantity
+    document.getElementById(trm).innerText = amount
 }
-function drawAutomatic(param) {
-    let autoAmount = automaticUpgrades[param].quantity
-    document.getElementById(param).innerText = autoAmount
+function drawAutomaticCount(trm) {
+    let automaticCount = automaticUpgrades[trm].quantity
+    document.getElementById(trm).innerText = automaticCount
 }
