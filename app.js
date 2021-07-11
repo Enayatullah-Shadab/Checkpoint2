@@ -55,6 +55,7 @@ function buyClickUpgrade(term) {
         cheese -= cost
     }
     update()
+    displayInventory()
 }
 function buyAutomaticUpgrade(par) {
     let cost = automaticUpgrades[par].price
@@ -69,6 +70,7 @@ function buyAutomaticUpgrade(par) {
     }, 3000);
 
     update()
+    displayInventory()
 }
 
 function displayInventory() {
