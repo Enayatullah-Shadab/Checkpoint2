@@ -4,10 +4,6 @@ var click = 1
 var automaticClick = 0
 
 
-function mine() {
-    cheese++
-    update()
-}
 let clickUpgrades = {
     apple: {
         price: 5,
@@ -96,26 +92,65 @@ function buyAutomaticUpgrade(para) {
     if (cheese >= cost) {
         amount++
         automaticClick += bonus
-        cheese -= cost
+        cheese += cost
         drawAutomaticCost(para)
         startInterval()
     }
     update()
-    drawAutomaticCount()
+    drawAutomaticAmount()
+}
+
+function mine() {
+    cheese++
+    update()
 }
 function update() {
     document.getElementById('cheese').innerText = cheese
     document.getElementById('che').innerText = cheese
-    document.getElementById('app').innerText = click
-    document.getElementById('cps').innerText = cps
-    document.getElementById('tcm').innerText = tcm
+    document.getElementById('apple').innerText = click
+    document.getElementById('orange').innerText = orange
+    document.getElementById('dog').innerText = dog
+    document.getElementById('cat').innerText = cat
+    document.getElementById('click').innerText = click
+    document.getElementById('automaticClick').innerText = automaticClick
 }
+function display() {
+    if (cheese <= apple)
+        document.getElementById('apple').disabled = true
+    else
+        document.getElementById('apple').disabled = false
+
+    if (cheese <= orange)
+        document.getElementById('orange').disabled = true
+    else
+        document.getElementById('orange').disabled = false
+
+
+
+}
+
 
 function drawClickAmount(trm) {
     let amount = clickUpgrades[trm].quantity
     document.getElementById(trm).innerText = amount
 }
-function drawAutomaticCount(trm) {
-    let automaticCount = automaticUpgrades[trm].quantity
-    document.getElementById(trm).innerText = automaticCount
+function drawAutomaticAmount(trm) {
+    let automaticAmount = automaticUpgrades[trm].quantity
+    document.getElementById(trm).innerText = automaticAmount
+}
+function drawClickCost(para) {
+    cost *= 2
+    document.getElementById(para).innerText = cost
+}
+function drawAutoCost(para) {
+    cost *= 4
+    document.getElementById(para).innerText = cost
+}
+
+function startInterval() {
+    setInterval(collectAutoUpgrades, 1000);
+}
+function collectAutoUpgrades() {
+    let collect = amount.dog * bonus.dog
+    cheese += collect
 }
