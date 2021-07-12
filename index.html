@@ -14,7 +14,7 @@
 
 <body class="bg-light">
     <!-- this is my header -->
-    <header class="container-fluid bg-primary text-center sticky-top w-100">
+    <header class="container-fluid bg-primary text-center sticky-top w-100 py-3">
         <h1>Moon Miner</h1>
     </header>
     <!-- this is my body -->
@@ -25,55 +25,55 @@
             <div class="col-4 px-5 pt-5">
                 <div class="row">
                     <h2 class="mt-3">Start</h2>
-                    <div class="col-12 bg-secondary text-light round ">
-                        <div>Cheese per Second:<span id="">0</span></div>
-                        <div>Total cheese multiplier: <span id="">0</span></div>
+                    <div class="col-12 bg-secondary text-light round py-3">
+                        <div class="p-2">Cheese per Second:<span id="">0</span></div>
+                        <div class="2">Total cheese multiplier: <span id="">0</span></div>
                     </div>
                     <h2 class="pt-2">Store</h2>
                 </div>
-                <div class="row bg-secondary text-light round">
-                    <div class="col-6">Click Upgrades</div>
-                    <div class="col-6">Auto-click Upgrade</div>
+                <div class="row bg-secondary text-light round py-4">
+                    <div class="col-6 py-2">Click Upgrades</div>
+                    <div class="col-6 py-2">Auto-click Upgrade</div>
                     <!-- these are my clickUpgrades and autoUpgrades buttons -->
-                    <div class="col-6 mb-2">
+                    <div class="col-6 my-2">
                         <button id="apple" class="btn btn-info" onclick="buyClickUpgrade('apple')">🍎 5 points</button>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 my-2">
                         <button id="dog" class="btn btn-info" onclick="buyAutoSetInt('dog')">🐶 15 points
                         </button>
                     </div>
-                    <div class="col-6 mb-2">
+                    <div class="col-6 my-2">
                         <button id="orange" class="btn btn-info" onclick="buyClickUpgrade('orange')">🍊 10
                             points</button>
                     </div>
-                    <div class="col-6">
+                    <div class="col-6 my-2">
                         <button id="cat" class="btn btn-info" onclick="buyAutoSetInt('cat')">😾 25 points</button>
                     </div>
                 </div>
             </div>
             <!-- this is my second main column that contain moon image and cheese mime connection-->
             <div class="col-5 py-5">
-                <img class="img-fluid btn img py-3 px-3" src="./image/Moon.jpg" alt="" onclick="mine(1)">
+                <img class="img-fluid btn img py-4 px-3" src="./image/Moon.jpg" alt="" onclick="mine(1)">
                 <h4 class="bg-success text-center text-light cheese"> Cheese: <span id="cheese">0</span></h4>
             </div>
             <!-- this is my third main column that contain my inventory -->
             <div class="col-3 text-center py-5">
 
-                <div class="row bg-secondary text-light invt mt-5 mr-3">
+                <div class="row bg-secondary text-light invt mt-5 py-5 mr-3">
                     <div>
                         <h2 id="inventory" class="text-center text-light"> Inventory</h2>
                     </div>
-                    <div class="col-12 cheese"> Cheese : <a id="che">0</a></div>
-                    <div class=" col-12">Apple : <a id="app">0</a></div>
-                    <div class="col-12">Orange : <a id="org">0</a></div>
-                    <div class="col-12">Dog : <a id="do">0</a></div>
-                    <div class="col-12">Cat : <a id="ca">0</a></div>
+                    <div class="col-12 cheese py-2"> Cheese : <a id="che">0</a></div>
+                    <div class=" col-12 py-2">Apple : <a id="app">0</a></div>
+                    <div class="col-12 py-2">Orange : <a id="org">0</a></div>
+                    <div class="col-12 py-2">Dog : <a id="do">0</a></div>
+                    <div class="col-12 py-2">Cat : <a id="ca">0</a></div>
                 </div>
             </div>
         </div>
     </main>
     <!-- this is my footer -->
-    <footer class="container-fluid bg-info text-light py-3">
+    <footer class="container-fluid bg-info text-light py-4">
         <h4>Made by 💖 Sha</h4>
 
     </footer>
