@@ -38,9 +38,7 @@ function update() {
 function buyClickUpgrade(term) {
     let cost = clickUpgrades[term].price
     let qty = clickUpgrades[term].quantity
-
     let multi = clickUpgrades[term].multiplier
-
     if (cheese >= cost) {
         qty++
         cheese -= cost
@@ -55,7 +53,6 @@ function buyClickUpgrade(term) {
 
     if (term == 'apple') {
         document.getElementById('apple').innerText = "🍎 " + clickUpgrades[term].price + " points";
-        // cost//
         document.getElementById("app").innerHTML = clickUpgrades[term].quantity;
     }
 
@@ -66,24 +63,20 @@ function buyClickUpgrade(term) {
 
     }
     update()
-
-    // displayInventory()
 }
 function buyAutomaticUpgrade(par) {
     let cost = automaticUpgrades[par].price
     let qty = automaticUpgrades[par].quantity
-
     let multi = automaticUpgrades[par].multiplier
-
     if (cheese >= cost) {
         qty++
         cheese -= cost
         cost += Math.abs(Math.round(multi))
     }
 
-    automaticUpgrades[par].price = cost;
-    automaticUpgrades[par].quantity = qty;
-    automaticUpgrades[par].multiplier = multi;
+    automaticUpgrades[par].price = Math.floor(Math.round(cost));
+    automaticUpgrades[par].quantity = Math.floor(Math.round(qty));
+    automaticUpgrades[par].multiplier = Math.floor(Math.round(multi));
 
     if (par == 'dog') {
         document.getElementById('dog').innerText = "🐶 " + cost + " points"
@@ -96,8 +89,6 @@ function buyAutomaticUpgrade(par) {
         document.getElementById("ca").innerHTML = automaticUpgrades[par].quantity;
     }
     update()
-    displayInventory()
-
 }
 
 function mine(increaseValue) {
@@ -120,7 +111,7 @@ function buyAutoSetInt(btnVal) {
 
 function displayInventory() {
     if (clickUpgrades.apple) {
-        cheeseCheck = clickUpgrades.apple.price
+        let cheeseCheck = clickUpgrades.apple.price
         if (cheese >= cheeseCheck)
             document.getElementById('apple').disabled = false
         else
