@@ -36,24 +36,24 @@
                     <div class="col-6">Auto-click Upgrade</div>
                     <!-- these are my clickUpgrades and autoUpgrades buttons -->
                     <div class="col-6 mb-2">
-                        <button id="ap" class="btn btn-info" onclick="buyClickUpgrade('apple')">🍎 5 points</button>
+                        <button id="apple" class="btn btn-info" onclick="buyClickUpgrade('apple')">🍎 5 points</button>
                     </div>
                     <div class="col-6">
-                        <button id="dg" class="btn btn-info" onclick="buyAutomaticUpgrade('dog')">🐶 15 points
+                        <button id="dog" class="btn btn-info" onclick="buyAutoSetInt('dog')">🐶 15 points
                         </button>
                     </div>
                     <div class="col-6 mb-2">
-                        <button id="or" class="btn btn-info" onclick="buyClickUpgrade('orange')">🍊 10
+                        <button id="orange" class="btn btn-info" onclick="buyClickUpgrade('orange')">🍊 10
                             points</button>
                     </div>
                     <div class="col-6">
-                        <button id="ct" class="btn btn-info" onclick="buyAutomaticUpgrade('cat')">😾 25 points</button>
+                        <button id="cat" class="btn btn-info" onclick="buyAutoSetInt('cat')">😾 25 points</button>
                     </div>
                 </div>
             </div>
             <!-- this is my second main column that contain moon image and cheese mime connection-->
             <div class="col-5 py-5">
-                <img class="img-fluid btn img" src="./image/Moon.jpg" alt="" onclick="mine()">
+                <img class="img-fluid btn img" src="./image/Moon.jpg" alt="" onclick="mine(1)">
                 <h4 class="bg-success text-center text-light cheese"> Cheese: <span id="cheese">0</span></h4>
             </div>
             <!-- this is my third main column that contain my inventory -->
@@ -61,13 +61,13 @@
 
                 <div class="row bg-secondary text-light invt mt-5">
                     <div>
-                        <h2 class="text-center text-light"> Inventory</h2>
+                        <h2 id="inventory" class="text-center text-light"> Inventory</h2>
                     </div>
-                    <div class="col-12 cheese"> Cheese : <span id="che">0</span></div>
-                    <div class=" col-12">Apple : <span id="app">0</span></div>
-                    <div class="col-12">Orange : <span id="org">0</span></div>
-                    <div class="col-12">Dog : <span id="do">0</span></div>
-                    <div class="col-12">Cat : <span id="ca">0</span></div>
+                    <div class="col-12 cheese"> Cheese : <a id="che">0</a></div>
+                    <div class=" col-12">Apple : <a id="app">0</a></div>
+                    <div class="col-12">Orange : <a id="org">0</a></div>
+                    <div class="col-12">Dog : <a id="do">0</a></div>
+                    <div class="col-12">Cat : <a id="ca">0</a></div>
                 </div>
             </div>
         </div>
