@@ -14,15 +14,15 @@
 
 <body class="bg-light">
     <!-- this is my header -->
-    <header class="container-fluid bg-primary text-center py-3">
+    <header class="container-fluid bg-primary text-center sticky-top w-100">
         <h1>Moon Miner</h1>
     </header>
     <!-- this is my body -->
-    <main class="container">
+    <main class="container-fluid p-3">
         <!-- I created a row than contains three columns -->
         <div class="row">
             <!--this is my first main column which has the start and store section of my page-->
-            <div class="col-4">
+            <div class="col-4 px-5 pt-5">
                 <div class="row">
                     <h2 class="mt-3">Start</h2>
                     <div class="col-12 bg-secondary text-light round ">
@@ -53,13 +53,13 @@
             </div>
             <!-- this is my second main column that contain moon image and cheese mime connection-->
             <div class="col-5 py-5">
-                <img class="img-fluid btn img" src="./image/Moon.jpg" alt="" onclick="mine(1)">
+                <img class="img-fluid btn img py-3 px-3" src="./image/Moon.jpg" alt="" onclick="mine(1)">
                 <h4 class="bg-success text-center text-light cheese"> Cheese: <span id="cheese">0</span></h4>
             </div>
             <!-- this is my third main column that contain my inventory -->
             <div class="col-3 text-center py-5">
 
-                <div class="row bg-secondary text-light invt mt-5">
+                <div class="row bg-secondary text-light invt mt-5 mr-3">
                     <div>
                         <h2 id="inventory" class="text-center text-light"> Inventory</h2>
                     </div>
